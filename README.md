@@ -1,5 +1,5 @@
 # springboot-3
-*[SpringBoot开发常用技术整合](https://www.imooc.com/learn/956)*
+*[SpringBoot开发常用技术整合](https://www.imooc.com/learn/956)*<br>
 *[作者源码](https://github.com/leechenxiang/imooc-springboot-starter)*
 
 ## 第1章 SpringBoot 简介
