@@ -1,6 +1,8 @@
 # springboot-3
-*[SpringBoot开发常用技术整合](https://www.imooc.com/learn/956)*<br>
-*[作者源码](https://github.com/leechenxiang/imooc-springboot-starter)*
+简介：本课程通过详细的对springboot的各个技能点逐一介绍与演示，可以很迅速的熟悉整个springboot框架体系，并且与springmvc有效的进行对比，理解异同，这样对于后续的springboot开发会非常迅速。同时课程中会针对不同的技术点进行不同的应用场景的讲解，使得学生更好的理解未来自己做项目中如何运用。
+
+[SpringBoot开发常用技术整合](https://www.imooc.com/learn/956)<br>
+[作者源码](https://github.com/leechenxiang/imooc-springboot-starter)
 
 ## 第1章 SpringBoot 简介
 SpringBoot 简介
