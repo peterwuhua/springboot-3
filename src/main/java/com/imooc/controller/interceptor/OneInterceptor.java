@@ -1,6 +1,6 @@
 package com.imooc.controller.interceptor;
 
-import com.imooc.pojo.IMoocJSONResult;
+import com.imooc.pojo.LeeJSONResult;
 import com.imooc.utils.JsonUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -27,7 +27,7 @@ public class OneInterceptor implements HandlerInterceptor {
         return true;
 
         /*if (true) {
-			returnErrorResponse(response, IMoocJSONResult.errorMsg("被one拦截..."));
+			returnErrorResponse(response, LeeJSONResult.errorMsg("被one拦截..."));
 		}
 
 		return false;*/
@@ -50,7 +50,7 @@ public class OneInterceptor implements HandlerInterceptor {
 
     }
 
-    public void returnErrorResponse(HttpServletResponse response, IMoocJSONResult result)
+    public void returnErrorResponse(HttpServletResponse response, LeeJSONResult result)
             throws IOException, UnsupportedEncodingException {
         OutputStream out = null;
         try {

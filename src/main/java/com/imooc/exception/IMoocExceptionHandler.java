@@ -1,6 +1,6 @@
 package com.imooc.exception;
 
-import com.imooc.pojo.IMoocJSONResult;
+import com.imooc.pojo.LeeJSONResult;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
@@ -35,7 +35,7 @@ public class IMoocExceptionHandler {
         e.printStackTrace();
 
         if (isAjax(request)) {
-            return IMoocJSONResult.errorException(e.getMessage());
+            return LeeJSONResult.errorException(e.getMessage());
         } else {
             ModelAndView mav = new ModelAndView();
             mav.addObject("exception", e);

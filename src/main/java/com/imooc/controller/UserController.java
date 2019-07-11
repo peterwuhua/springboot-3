@@ -1,6 +1,6 @@
 package com.imooc.controller;
 
-import com.imooc.pojo.IMoocJSONResult;
+import com.imooc.pojo.LeeJSONResult;
 import com.imooc.pojo.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,7 +32,7 @@ public class UserController {
 
     @RequestMapping("/getUserJson")
 //    @ResponseBody
-    public IMoocJSONResult getUserJson() {
+    public LeeJSONResult getUserJson() {
 
         User u = new User();
         u.setName("imooc");
@@ -41,6 +41,6 @@ public class UserController {
         u.setPassword("imooc");
         u.setDesc("hello imooc~~");
 
-        return IMoocJSONResult.ok(u);
+        return LeeJSONResult.ok(u);
     }
 }

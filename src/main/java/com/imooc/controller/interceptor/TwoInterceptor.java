@@ -7,12 +7,12 @@ import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.imooc.pojo.LeeJSONResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.imooc.pojo.IMoocJSONResult;
 import com.imooc.utils.JsonUtils;
 
 public class TwoInterceptor implements HandlerInterceptor  {
@@ -26,7 +26,7 @@ public class TwoInterceptor implements HandlerInterceptor  {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object object) throws Exception {
 
 		if (true) {
-			returnErrorResponse(response, IMoocJSONResult.errorMsg("被two拦截..."));
+			returnErrorResponse(response, LeeJSONResult.errorMsg("被two拦截..."));
 		}
 
 		System.out.println("被two拦截...");
@@ -54,7 +54,7 @@ public class TwoInterceptor implements HandlerInterceptor  {
 		
 	}
 	
-	public void returnErrorResponse(HttpServletResponse response, IMoocJSONResult result) throws IOException, UnsupportedEncodingException {
+	public void returnErrorResponse(HttpServletResponse response, LeeJSONResult result) throws IOException, UnsupportedEncodingException {
 		OutputStream out=null;
 		try{
 		    response.setCharacterEncoding("utf-8");

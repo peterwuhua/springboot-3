@@ -1,8 +1,6 @@
 package com.imooc.exception;
 
-import com.imooc.pojo.IMoocJSONResult;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.RestControllerAdvice;
+import com.imooc.pojo.LeeJSONResult;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -14,10 +12,10 @@ import javax.servlet.http.HttpServletRequest;
 public class IMoocAjaxExceptionHandler {
 
 //    @ExceptionHandler(value = Exception.class)
-    public IMoocJSONResult defaultErrorHandler(HttpServletRequest req, Exception e) {
+    public LeeJSONResult defaultErrorHandler(HttpServletRequest req, Exception e) {
 
         e.printStackTrace();
-        return IMoocJSONResult.errorException(e.getMessage());
+        return LeeJSONResult.errorException(e.getMessage());
     }
 
 }

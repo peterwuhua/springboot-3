@@ -1,6 +1,6 @@
 package com.imooc.controller;
 
-import com.imooc.pojo.IMoocJSONResult;
+import com.imooc.pojo.LeeJSONResult;
 import com.imooc.pojo.SysUser;
 import com.imooc.pojo.User;
 import com.imooc.utils.JsonUtils;
@@ -32,7 +32,7 @@ public class RedisController {
     }
 
     @RequestMapping("/test")
-    public IMoocJSONResult test() {
+    public LeeJSONResult test() {
 
         strRedis.opsForValue().set("imooc-cache", "hello 慕课网~~~~~~");
 
@@ -46,11 +46,11 @@ public class RedisController {
 
         SysUser jsonUser = JsonUtils.jsonToPojo(strRedis.opsForValue().get("json:user"), SysUser.class);
 
-        return IMoocJSONResult.ok(jsonUser);
+        return LeeJSONResult.ok(jsonUser);
     }
 
     @RequestMapping("/getJsonList")
-    public IMoocJSONResult getJsonList() {
+    public LeeJSONResult getJsonList() {
 
 
         User user = new User();
@@ -81,6 +81,6 @@ public class RedisController {
         String userListJson = redis.get("json:info:userlist");
         List<User> userListBorn = JsonUtils.jsonToList(userListJson, User.class);
 
-        return IMoocJSONResult.ok(userListBorn);
+        return LeeJSONResult.ok(userListBorn);
     }
 }

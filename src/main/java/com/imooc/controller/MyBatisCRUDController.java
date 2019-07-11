@@ -1,6 +1,6 @@
 package com.imooc.controller;
 
-import com.imooc.pojo.IMoocJSONResult;
+import com.imooc.pojo.LeeJSONResult;
 import com.imooc.pojo.SysUser;
 import com.imooc.service.UserService;
 import org.n3r.idworker.Sid;
@@ -30,7 +30,7 @@ public class MyBatisCRUDController {
     }
 
     @RequestMapping("/saveUser")
-    public IMoocJSONResult saveUser() {
+    public LeeJSONResult saveUser() {
 
         String userId = sid.nextShort();
 
@@ -44,11 +44,11 @@ public class MyBatisCRUDController {
 
         userService.saveUser(user);
 
-        return IMoocJSONResult.ok("保存成功");
+        return LeeJSONResult.ok("保存成功");
     }
 
     @RequestMapping("/updateUser")
-    public IMoocJSONResult updateUser() {
+    public LeeJSONResult updateUser() {
 
         SysUser user = new SysUser();
         user.setId("10011001");
@@ -60,25 +60,25 @@ public class MyBatisCRUDController {
 
         userService.updateUser(user);
 
-        return IMoocJSONResult.ok("保存成功");
+        return LeeJSONResult.ok("保存成功");
     }
 
     @RequestMapping("/deleteUser")
-    public IMoocJSONResult deleteUser(String userId) {
+    public LeeJSONResult deleteUser(String userId) {
 
         userService.deleteUser(userId);
 
-        return IMoocJSONResult.ok("删除成功");
+        return LeeJSONResult.ok("删除成功");
     }
 
     @RequestMapping("/queryUserById")
-    public IMoocJSONResult queryUserById(String userId) {
+    public LeeJSONResult queryUserById(String userId) {
 
-        return IMoocJSONResult.ok(userService.queryUserById(userId));
+        return LeeJSONResult.ok(userService.queryUserById(userId));
     }
 
     @RequestMapping("/queryUserList")
-    public IMoocJSONResult queryUserList() {
+    public LeeJSONResult queryUserList() {
 
         SysUser user = new SysUser();
         user.setUsername("imooc");
@@ -86,11 +86,11 @@ public class MyBatisCRUDController {
 
         List<SysUser> userList = userService.queryUserList(user);
 
-        return IMoocJSONResult.ok(userList);
+        return LeeJSONResult.ok(userList);
     }
 
     @RequestMapping("/queryUserListPaged")
-    public IMoocJSONResult queryUserListPaged(Integer page) {
+    public LeeJSONResult queryUserListPaged(Integer page) {
 
         if (page == null) {
             page = 1;
@@ -103,17 +103,17 @@ public class MyBatisCRUDController {
 
         List<SysUser> userList = userService.queryUserListPaged(user, page, pageSize);
 
-        return IMoocJSONResult.ok(userList);
+        return LeeJSONResult.ok(userList);
     }
 
     @RequestMapping("/queryUserByIdCustom")
-    public IMoocJSONResult queryUserByIdCustom(String userId) {
+    public LeeJSONResult queryUserByIdCustom(String userId) {
 
-        return IMoocJSONResult.ok(userService.queryUserByIdCustom(userId));
+        return LeeJSONResult.ok(userService.queryUserByIdCustom(userId));
     }
 
     @RequestMapping("/saveUserTransactional")
-    public IMoocJSONResult saveUserTransactional() {
+    public LeeJSONResult saveUserTransactional() {
 
         String userId = sid.nextShort();
 
@@ -127,6 +127,6 @@ public class MyBatisCRUDController {
 
         userService.saveUserTransactional(user);
 
-        return IMoocJSONResult.ok("保存成功");
+        return LeeJSONResult.ok("保存成功");
     }
 }

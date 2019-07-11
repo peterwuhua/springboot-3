@@ -1,6 +1,6 @@
 package com.imooc.controller;
 
-import com.imooc.pojo.IMoocJSONResult;
+import com.imooc.pojo.LeeJSONResult;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -29,9 +29,9 @@ public class ErrorController {
 
     @RequestMapping("/getAjaxerror")
     @ResponseBody
-    public IMoocJSONResult getAjaxerror() {
+    public LeeJSONResult getAjaxerror() {
 
         int a = 1 / 0;
-        return IMoocJSONResult.ok();
+        return LeeJSONResult.ok();
     }
 }
